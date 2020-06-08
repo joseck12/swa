@@ -1,0 +1,45 @@
+{% extends "swapp/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="home-slider js-fullheight owl-carousel">
+	<div class="slider-item js-fullheight" style="background-image:url({% static 'swapp/img/bg_1.jpg' %});">
+		<div class="overlay"></div>
+		<div class="container">
+			{% for detail in details %}
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="col-md-8 text-center ftco-animate mt-5">
+					<div class="text">
+						<div class="subheading">
+							<span>{{ detail.name }}</span>
+						</div>
+						<h1 class="mb-4">Following <span>Jesus</span> wherever we are</h1>
+						<p>{{ detail.about_church|truncatewords:20 }}<a href="{% url 'swapp:about' %}" class="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+						<p><a href="{% url 'swapp:contact' %}" class="btn btn-primary py-2 px-4">Be part of us</a> </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="slider-item js-fullheight" style="background-image:url({% static 'swapp/img/bg_2.jpg' %});">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="col-md-8 text-center ftco-animate mt-5">
+					<div class="text">
+						<div class="subheading">
+							<span>{{ detail.name }}</span>
+						</div>
+						<h1 class="mb-4">We <span>Love</span> God, We Believe in God</h1>
+						<p>{{ detail.about_church|truncatewords:20 }}<a href="{% url 'swapp:about' %}" class="btn btn-primary btn-outline-primary py-2 px-4">Read more</a></p>
+						<p><a href="{% url 'swapp:contact' %}" class="btn btn-primary py-2 px-4">Be part of us</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+{% endblock %}

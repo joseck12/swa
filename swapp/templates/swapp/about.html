@@ -1,0 +1,118 @@
+{% extends "swapp/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about-section" id="about-section">
+  <div class="container-fluid px-0">
+    {% for detail in details %}
+    <div class="row d-md-flex text-wrapper">
+      <div class="one-half img" style="background-image: url('{% static 'swapp/img/about.jpg' %}');"></div>
+      <div class="one-half half-text d-flex justify-content-end align-items-center ftco-animate">
+        <div class="text-inner pl-md-5">
+          <h3 class="heading">Welcome to <span>{{ detail.name|title }}</span></h3>
+          <p>{{ detail.about_church }}</p>
+          <ul class="my-4">
+            <li><span class="ion-ios-checkmark-circle mr-2"></span> Even the all-powerful Pointing</li>
+            <li><span class="ion-ios-checkmark-circle mr-2"></span> Behind the word mountains</li>
+            <li><span class="ion-ios-checkmark-circle mr-2"></span> Separated they live in Bookmarksgrove</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-counter" id="section-counter">
+  <div class="container-fluid px-0">
+    <div class="row no-gutters">
+      <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center py-5">
+          <div class="text">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-users"></span>
+            </div>
+            <strong class="number" data-number="2000">0</strong>
+            <span>Members</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center py-5">
+          <div class="text">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-user"></span>
+            </div>
+            <strong class="number" data-number="30">0</strong>
+            <span>Pastors</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center py-5">
+          <div class="text">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-money"></span>
+            </div>
+            <strong class="number" data-number="935050">0</strong>
+            <span> Project Contribution</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center py-5">
+          <div class="text">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-home"></span>
+            </div>
+            <strong class="number" data-number="20">0</strong>
+            <span>Churches</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ftco-gallery ftco-section ftco-no-pb mb-4">
+  <div class="container-fluid px-4">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <h3 class="subheading">Gallery</h3>
+        <h2 class="mb-1">Our Photo Gallery</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 ftco-animate">
+        <a href="{% static 'swapp/img/gallery-1.jpg' %}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({% static 'swapp/img/gallery-1.jpg' %});">
+          <div class="icon mb-4 d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 ftco-animate">
+        <a href="{% static 'swapp/img/gallery-2.jpg' %}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({% static 'swapp/img/gallery-2.jpg' %});">
+          <div class="icon mb-4 d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 ftco-animate">
+        <a href="{% static 'swapp/img/gallery-3.jpg' %}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({% static 'swapp/img/gallery-3.jpg' %});">
+          <div class="icon mb-4 d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 ftco-animate">
+        <a href="{% static 'swapp/img/gallery-4.jpg' %}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({% static 'swapp/img/gallery-4.jpg' %});">
+          <div class="icon mb-4 d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

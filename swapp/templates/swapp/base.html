@@ -1,0 +1,144 @@
+{% load static %}
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% if title %}
+  <title>{{ details.name }}</title>
+  {% else %}
+  <title> Saints Worship Assembly </title>
+  {% endif %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  {% block styles %}
+  <link rel="stylesheet" href="{% static 'swapp/css/open-iconic-bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/icomoon.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'swapp/css/ionicons.min.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+  {% bootstrap_css %}
+  {% endblock %}
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-dark site-navbar-target" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'swapp:home' %}"><span class="flaticon-bible"></span>SWA</a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="{% url 'swapp:home' %}" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="{% url 'swapp:about' %}" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="{% url 'swapp:services' %}" class="nav-link"><span>Services</span></a></li>
+          <li class="nav-item"><a href="{% url 'swapp:events' %}" class="nav-link"><span>Events</span></a></li>
+          <li class="nav-item"><a href="{% url 'swapp:projects' %}" class="nav-link"><span> Ongoing Projects</span></a></li>
+          <li class="nav-item"><a href="{% url 'swapp:pastors' %}" class="nav-link"><span>Pastor</span></a></li>
+          <li class="nav-item"><a href="{% url 'swapp:blog' %}" class="nav-link"><span>Blog</span></a></li>
+          <li class="nav-item"><a href="{% url 'swapp:contact' %}" class="nav-link"><span>Contact</span></a></li>
+          <li><a href="{% url 'swapp:givings' %}" class="btn btn-primary py-2 px-4">GIVING</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {%block content%} {% endblock %}
+
+  <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2 logo"><span>Saints Worship Assembly</span> </h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">About</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>History</a></li>
+              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mission</a></li>
+              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Wedding &amp; Funerals</a></li>
+              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Fellowships</a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Connect</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Children</a></li>
+              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Counseling</a></li>
+              <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Assistance</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Service Hours</h2>
+            <div class="opening-hours">
+              <p>Saturday Prayer Meeting: <span class="mb-3">10:00 am to 11:30 am</span></p>
+              <p>Sunday Service: <span class="mb-3">8:30 am to 11:30 am</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>
+            Copyright &copy;<script>
+              document.write(new Date().getFullYear());
+            </script> All rights reserved | saintsworshipassembly
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+  <script src="{% static 'swapp/js/jquery.min.js' %}"></script>
+  <script src="{% static 'swapp/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'swapp/js/popper.min.js' %}"></script>
+  <script src="{% static 'swapp/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'swapp/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'swapp/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'swapp/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'swapp/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'swapp/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'swapp/js/aos.js' %}"></script>
+  <script src="{% static 'swapp/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'swapp/js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'swapp/js/google-map.js' %}"></script>
+  <script src="{% static 'swapp/js/main.js' %}"></script>
+
+</body>
+
+</html>

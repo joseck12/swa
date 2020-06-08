@@ -1,0 +1,18 @@
+{% extends "swapp/base.html" %}
+{% load static %}
+{% block content %}
+<section class="ftco-section ftco-causes ftco-no-pb" id="causes-section">
+	<div class="container">
+		<div class="row justify-content-center pb-5">
+			<div class="col-md-12 heading-section text-center ftco-animate">
+				<span class="subheading">Giving</span>
+				<h2 class="mb-5">Partner With Us</h2>
+			</div>
+		</div>
+	</div>
+</section>
+  {% for contribution in contributions %}
+  {% empty %}
+    <h3>Details coming soon </h3>
+  {% endfor %}
+{% endblock content %}
